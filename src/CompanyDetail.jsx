@@ -1,12 +1,5 @@
 import { useQuery, gql } from "@apollo/client";
-const GET_COMPANY = gql`
-  query GetCompany($id: String!) {
-    company(id: $id) {
-      name
-      description
-    }
-  }
-`;
+import { GET_COMPANY} from './queries';
 
 export function CompanyDetail( { companyId } ) {
   console.log("companyId: ", companyId);
