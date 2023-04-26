@@ -19,3 +19,14 @@ export const GET_COMPANY = gql`
     }
   }
 `;
+
+export const LOGIN_USER = gql`
+  query GetUser($email: String!, $password: String!) {
+    user(email: $email, password: $password) {
+      id
+      email
+      name
+      type
+    }
+  }
+`;

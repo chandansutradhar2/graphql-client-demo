@@ -1,7 +1,7 @@
 import { useQuery, gql } from "@apollo/client";
-import { GET_COMPANY} from './queries';
+import { GET_COMPANY } from "./queries";
 
-export function CompanyDetail( { companyId } ) {
+export function CompanyDetail({ companyId }) {
   console.log("companyId: ", companyId);
   const { loading, error, data } = useQuery(GET_COMPANY, {
     variables: { id: companyId },
